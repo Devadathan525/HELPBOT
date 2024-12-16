@@ -111,7 +111,7 @@ def initialize_session_state():
     if "conversation" not in st.session_state:
         llm = OpenAI(
             temperature=0,
-            openai_api_key="sk-netscout-ai-N6xk5hknLuhpDcBP2hcuT3BlbkFJHVmQS14MN0Vs38agABiv")
+            openai_api_key="")
         st.session_state.conversation = ChatMessageHistory(
             llm=llm,
             memory=ConversationSummaryMemory(llm=llm),
